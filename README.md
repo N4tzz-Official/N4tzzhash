@@ -24,10 +24,10 @@ transformations = [
 	{'t' : '7'}
 ]
 Common Padding Values
-When setting passwords, I believe it's pretty standard to add a sequence of characters before and/or after the main passphrase to make it "stronger". For example, one may set a password "dragon" and add a value like "!!!" or "!@#" at the end, resulting in "dragon!!!", "dragon!@#", etc. Psudohash reads such values from common_padding_values.txt and uses them to mutate the provided keywords by appending them before (-cpb) or after (-cpa) each generated keyword variation. You can modify it as you see fit.
+When setting passwords, I believe it's pretty standard to add a sequence of characters before and/or after the main passphrase to make it "stronger". For example, one may set a password "dragon" and add a value like "!!!" or "!@#" at the end, resulting in "dragon!!!", "dragon!@#", etc. N4tzzhash reads such values from common_padding_values.txt and uses them to mutate the provided keywords by appending them before (-cpb) or after (-cpa) each generated keyword variation. You can modify it as you see fit.
 
 Year Values
-When appending a year value to a mutated keyword, psudohash will do so by utilizing various seperators. by default, it will use the following seperators which you can modify by editing the year_seperators list:
+When appending a year value to a mutated keyword, N4tzzhash will do so by utilizing various seperators. by default, it will use the following seperators which you can modify by editing the year_seperators list:
 
 year_seperators = ['', '_', '-', '@']
 For example, if the given keyword is "amazon" and option -y 2023 was used, the output will include "amazon2023", "amazon_2023", "amazon-2023", "amazon@2023", "amazon23", "amazon_23", "amazon-23", "amazon@23".
